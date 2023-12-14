@@ -1,0 +1,11 @@
+ wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.83/bin/apache-tomcat-9.0.83.tar.gz
+2. tar -zxvf apache-tomcat-9.0.83.tar.gz
+3. vim apache-tomcat-9.0.83/conf/tomcat-users.xml
+
+  <role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <user username="tomcat" password="raham123" roles="manager-gui, manager-script"/>
+
+4. vim apache-tomcat-9.0.83/webapps/manager/META-INF/context.xml
+    delete line 21 & 22
+5. sh apache-tomcat-9.0.83/bin/startup.sh
